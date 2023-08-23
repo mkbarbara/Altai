@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Title';
+    src: url("./fonts/GranaPadano.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'TextRegular';
+    src: url("./fonts/ofont.ru_Vela\ Sans\ \(1\).ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'TextLight';
+    src: url("./fonts/ofont.ru_Vela\ Sans.ttf") format('truetype');
+}
