@@ -2,6 +2,7 @@ body {
     background-color: #0D303D;
     color: #c0dbe7;
     overflow-x: hidden;
+    margin: 0;
 }
 
 body::-webkit-scrollbar-thumb {

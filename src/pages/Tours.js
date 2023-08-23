@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
 import Container from "../components/Container";
 import Section from "../components/Section";
 import Header from "../components/Header";
@@ -499,6 +500,7 @@ const Tours = () => {
           </div>
         </div>
       )}
+      <Outlet />
     </div>
   );
 };

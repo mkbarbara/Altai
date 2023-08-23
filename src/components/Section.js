@@ -11,7 +11,7 @@ const Section = ({ title, content }) => {
 
 const sectionStyles = {
   margin: "4rem 0",
-  minHeight: "700px",
+  minHeight: "100vh",
   overflow: "hidden",
 };
 

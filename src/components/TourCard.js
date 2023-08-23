@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Card = ({ items }) => {
   const cardStyle = {
@@ -59,7 +60,7 @@ const Card = ({ items }) => {
               <div style={imageContainer}>
                 <img src={Val.img} alt={Val.title} style={cardImage} />
               </div>
-              <button style={cardButton}>Узнать подробнее</button>
+              <Link to={`/tours/${Val.link}`} style={cardButton}>Узнать подробнее</Link>
             </div>
         );
       })}

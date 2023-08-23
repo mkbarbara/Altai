@@ -27,3 +27,4 @@ export { default as Galery7 } from "./7.jpg";
 export { default as Galery8 } from "./8.jpg";
 export { default as Cloud } from "./cloud.png";
 export { default as Cloud2 } from "./cloud2.png";
+export { default as TourLogo } from './tour_logo.jpg';

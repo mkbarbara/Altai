@@ -51,7 +51,7 @@ const BigDropdown = ({ title, items }) => {
 
   return (
     <div style={bigDropdown}>
-      <h3 style={dropdownTitle}>{title}</h3>
+      {title && <h3 style={dropdownTitle}>{title}</h3>}
       <Rotate bottom left cascade>
         <div>
           {items.map((item, index) => (
