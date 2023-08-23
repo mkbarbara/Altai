@@ -1,4 +1,5 @@
 import BlockWithLine from "./BlockWithLine";
+import { Slide } from "react-awesome-reveal";
 
 const BlocksWithLines = ({ texts }) => {
   const numColumns = texts.length;
@@ -13,6 +14,7 @@ const BlocksWithLines = ({ texts }) => {
 
   return (
     <div style={blocksContainerStyles}>
+    <Slide cascade triggerOnce direction="up" damping={1e-1}>
       {texts.map((text, index) => (
         <BlockWithLine
           key={index}
@@ -20,6 +22,7 @@ const BlocksWithLines = ({ texts }) => {
           isLastChild={index === texts.length - 1}
         />
       ))}
+      </Slide>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import { Rotate } from "react-reveal";
+import { Slide } from "react-awesome-reveal";
 
 const BigDropdown = ({ title, items }) => {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -52,8 +52,8 @@ const BigDropdown = ({ title, items }) => {
   return (
     <div style={bigDropdown}>
       {title && <h3 style={dropdownTitle}>{title}</h3>}
-      <Rotate bottom left cascade>
         <div>
+        <Slide cascade triggerOnce direction="left" damping={1e-1}>
           {items.map((item, index) => (
             <div key={index} style={dropdownItem}>
               <div style={line}></div>
@@ -67,8 +67,8 @@ const BigDropdown = ({ title, items }) => {
               <div style={line}></div>
             </div>
           ))}
+          </Slide>
         </div>
-      </Rotate>
     </div>
   );
 };

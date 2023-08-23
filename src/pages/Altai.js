@@ -4,7 +4,7 @@ import Section from "../components/Section";
 import ImageWithInfo from "../components/ImageWithInfo";
 import BigDropdown from "../components//BigDropdown";
 import Footer from "../components/Footer";
-import Slide from "react-reveal/Slide";
+import {Slide} from "react-awesome-reveal";
 import * as images from "../images";
 
 const Altai = () => {
@@ -86,7 +86,7 @@ const Altai = () => {
       <Container>
         <Header />
       </Container>
-      <Slide bottom>
+      <Slide direction="up" triggerOnce>
         <Section
           title="Что же такое Алтай?"
           content={
@@ -105,7 +105,7 @@ const Altai = () => {
           content={
             <div style={sideImageContainer}>
               <BigDropdown title="Немного интересного" items={dropdownItems} />
-              <Slide bottom>
+              <Slide direction="up" triggerOnce>
                 <div style={imageContainer}>
                   <img
                     src={images.Interesting}

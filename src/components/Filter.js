@@ -6,7 +6,7 @@ import {
   faChevronDown,
   faChevronUp,
 } from "@fortawesome/free-solid-svg-icons";
-import Slide from "react-reveal/Slide";
+import {Slide} from "react-awesome-reveal";
 
 const Filter = ({
   title,
@@ -56,7 +56,7 @@ const Filter = ({
 
   return (
     <div>
-      <Slide bottom>
+      <Slide cascade triggerOnce>
         <div style={filterHeader} onClick={toggleExpand}>
           <h2 style={filterText}>{title}</h2>
           <FontAwesomeIcon icon={isExpanded ? faChevronUp : faChevronDown} />

@@ -6,7 +6,7 @@ import Section from "../components/Section";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import * as images from "../images";
-import Fade from "react-reveal/Fade";
+import { Slide } from "react-awesome-reveal";
 
 const imagesInfo = [
   { src: images.Galery1, type: "horizontal" },
@@ -119,7 +119,7 @@ const Gallery = () => {
               {imagesInfo.map(
                 (image, index) =>
                   index % 2 !== 0 && (
-                    <Fade bottom>
+                    <Slide direction="up" cascade triggerOnce>
                       <div
                         key={index}
                         style={{
@@ -136,7 +136,7 @@ const Gallery = () => {
                           alt={`${index}`}
                         />
                       </div>
-                    </Fade>
+                    </Slide>
                   )
               )}
             </div>
@@ -144,7 +144,7 @@ const Gallery = () => {
               {imagesInfo.map(
                 (image, index) =>
                   index % 2 === 0 && (
-                    <Fade bottom>
+                    <Slide direction="up" cascade triggerOnce>
                       <div
                         key={index}
                         style={{
@@ -161,7 +161,7 @@ const Gallery = () => {
                           alt={`${index}`}
                         />
                       </div>
-                    </Fade>
+                    </Slide>
                   )
               )}
             </div>

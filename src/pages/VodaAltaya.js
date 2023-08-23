@@ -1,5 +1,5 @@
 import React from "react";
-import Slide from "react-reveal/Slide";
+import { Slide } from "react-awesome-reveal";
 import { useNavigate } from "react-router-dom";
 import * as images from "../images";
 import Section from "../components/Section";
@@ -135,7 +135,7 @@ const VodaAltaya = () => {
 
   return (
     <div>
-      <Slide bottom>
+      <Slide direction="up" triggerOnce>
         <div style={logoContainer}>
           <img src={images.TourLogo} alt="VodaAltaya" style={imageStyle} />
           <h1 style={titleStyle}>Вода Алтая</h1>
@@ -147,7 +147,7 @@ const VodaAltaya = () => {
           </button>
         </div>
       </Slide>
-      <Slide bottom>
+      <Slide direction="up" triggerOnce cascade>
         <div style={{ position: "relative" }}>
           <p style={descriptionStyle}>
             На территории Горного Алтая расположено более 7 тысяч озёр,
@@ -243,7 +243,7 @@ const VodaAltaya = () => {
                 Скачать список личных вещей
               </button>
             </div>
-            <Slide bottom>
+            <Slide direction="up" triggerOnce>
               <div style={formStyle}>
                 <span style={bonusTitle}>Мне необходима консультация гида</span>
                 <form style={{ margin: "2rem" }}>

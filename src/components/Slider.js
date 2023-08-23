@@ -19,6 +19,46 @@ const Slider = ({ cards }) => {
     );
   };
 
+  const sliderStyles = {
+    margin: "8rem auto",
+  };
+  
+  const sliderContentStyles = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "relative",
+    height: "250px",
+  };
+  
+  const navigationStyles = {
+    display: "flex",
+    justifyContent: "center",
+    gap: ".5rem",
+    margin: "6rem 0",
+  };
+  
+  const navButtonStyle = {
+    background: "transparent",
+    color: "#c0dbe7",
+    border: "1px solid #c0dbe7",
+    borderRadius: "50%",
+    padding: "10px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    cursor: "pointer",
+    fontSize: "1.5rem",
+    width: "45px",
+    height: "45px",    
+  };
+  
+  const baseCardStyles = {
+    position: "absolute",
+    transition: "transform 0.3s, z-index 0.3s",
+    transformOrigin: "center center",
+  };
+
   return (
     <div style={sliderStyles}>
       <div style={sliderContentStyles}>
@@ -65,43 +105,6 @@ const Slider = ({ cards }) => {
       </div>
     </div>
   );
-};
-
-const sliderStyles = {
-  maxWidth: "600px",
-  margin: "4rem auto",
-};
-
-const sliderContentStyles = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  position: "relative",
-  height: "250px",
-};
-
-const navigationStyles = {
-  display: "flex",
-  justifyContent: "center",
-  gap: ".5rem",
-  margin: "60px 0",
-};
-
-const navButtonStyle = {
-  background: "transparent",
-  color: "#c0dbe7",
-  border: "1px solid #c0dbe7",
-  borderRadius: "50%",
-  padding: "10px",
-  display: "flex",
-  alignItems: "center",
-  cursor: "pointer",
-};
-
-const baseCardStyles = {
-  position: "absolute",
-  transition: "transform 0.3s, z-index 0.3s",
-  transformOrigin: "center center",
 };
 
 export default Slider;

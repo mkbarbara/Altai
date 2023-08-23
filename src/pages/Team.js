@@ -5,7 +5,7 @@ import Section from "../components/Section";
 import CardWithPhoto from "../components/CardWithPhoto";
 import * as images from "../images";
 import Footer from "../components/Footer";
-import Fade from "react-reveal/Fade";
+import { Slide } from "react-awesome-reveal";
 
 const Team = () => {
   const aboutTeam = {
@@ -34,7 +34,6 @@ const Team = () => {
       </Container>
       <Section
         content={
-          <Fade bottom>
             <div>
               <div style={pContainer}>
                 <p style={aboutTeam}>
@@ -49,7 +48,7 @@ const Team = () => {
                 </p>
               </div>
               <div style={teamContainer}>
-                <Fade bottom>
+                <Slide direction="up" cascade damping={1e-1} triggerOnce>
                   <CardWithPhoto
                     photo={images.Alex}
                     title={"Алексей"}
@@ -92,10 +91,9 @@ const Team = () => {
                       "Быстрая активная и ласковая девочка хаски. Пешие походы с детьми её самые любимые."
                     }
                   ></CardWithPhoto>
-                </Fade>
+                </Slide>
               </div>
             </div>
-          </Fade>
         }
       ></Section>
       <Container>

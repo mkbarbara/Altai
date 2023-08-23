@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Container from "../components/Container";
 import Section from "../components/Section";
 import Header from "../components/Header";
-import Slide from "react-reveal/Slide";
+import { Slide } from "react-awesome-reveal";
 import Footer from "../components/Footer";
 import Filter from "../components/Filter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -290,9 +290,9 @@ const Tours = () => {
         content={
           <div style={mainContainer}>
             <div style={filterDivider}>
-              <Slide bottom cascade>
                 <div style={{ width: "100%" }}>
                   <h2 style={filterHeader}>Фильтр</h2>
+                  <Slide cascade damping={1e-1} triggerOnce>
                   <Filter
                     title={"Сезон"}
                     filterItem={filterItem}
@@ -331,8 +331,8 @@ const Tours = () => {
                   >
                     Сбросить все
                   </button>
+                  </Slide>
                 </div>
-              </Slide>
               <div style={line}></div>
             </div>
             <div style={cardsContainer}>

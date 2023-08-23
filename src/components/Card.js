@@ -1,8 +1,11 @@
-const Card = ({ title, imageSrc }) => {
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Card = ({ title, imageSrc, link }) => {
   const cardStyles = {
     border: "none",
     borderRadius: "8px",
-    width: "500px",
+    width: "600px",
     position: "relative",
     overflow: "hidden",
   };
@@ -23,6 +26,7 @@ const Card = ({ title, imageSrc }) => {
     margin: "15px 0",
     zIndex: 1,
     letterSpacing: "1px",
+    color: "#c0dbe7",
   };
 
   const cardShadow = {
@@ -36,11 +40,13 @@ const Card = ({ title, imageSrc }) => {
   };
 
   return (
-    <div style={cardStyles}>
-      <img src={imageSrc} alt={title} style={imageStyles} />
-      <h2 style={titleStyle}>{title}</h2>
-      <div style={cardShadow}></div>
-    </div>
+    <Link to={`/tours/${link}`}>
+      <div style={cardStyles}>
+        <img src={imageSrc} alt={title} style={imageStyles} />
+        <h2 style={titleStyle}>{title}</h2>
+        <div style={cardShadow}></div>
+      </div>
+    </Link>
   );
 };
 
