@@ -18,6 +18,41 @@ input[type="range"]::-webkit-slider-thumb {
     height: 0;
 }
 
+input {
+  outline: none;
+}
+
+.react-datepicker__week, .react-datepicker__day-names {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 5px 0;
+}
+
+.react-datepicker {
+  background-color: #c0dbe7;
+  color: #0D303D;
+  border-radius: 6px;
+}
+
+.react-datepicker__aria-live {
+  display: none;
+}
+
+.react-datepicker-popper {
+  inset: 0px;
+  transform: none;
+  width: 100%;
+}
+
+.react-datepicker__day.react-datepicker__day--disabled, .react-datepicker__day--outside-month {
+  color: lightslategrey;
+  cursor: default;
+}
+
+.react-datepicker__day {
+  cursor: pointer;
+}
+
 @keyframes moveCloud {
     0% {
       transform: translateX(-100%);

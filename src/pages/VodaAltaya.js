@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Slide } from "react-awesome-reveal";
 import { useNavigate } from "react-router-dom";
 import * as images from "../images";
@@ -13,6 +13,15 @@ const VodaAltaya = () => {
 
   const goBack = () => {
     navigate(-1);
+  };
+
+  const anchorRef = useRef(null);
+
+  const handleDownload = () => {
+    const link = anchorRef.current;
+    link.href = `${process.env.PUBLIC_URL}/spisok.doc`;
+    link.download = "document.pdf";
+    link.click();
   };
 
   const dropdownItems = [
@@ -135,18 +144,16 @@ const VodaAltaya = () => {
 
   return (
     <div>
-      <Slide direction="up" triggerOnce>
-        <div style={logoContainer}>
-          <img src={images.TourLogo} alt="VodaAltaya" style={imageStyle} />
-          <h1 style={titleStyle}>Вода Алтая</h1>
-          <button
-            onClick={goBack}
-            style={{ ...backButtonStyle, top: 0, left: 0 }}
-          >
-            Назад
-          </button>
-        </div>
-      </Slide>
+      <div style={logoContainer}>
+        <img src={images.TourLogo} alt="VodaAltaya" style={imageStyle} />
+        <h1 style={titleStyle}>Вода Алтая</h1>
+        <button
+          onClick={goBack}
+          style={{ ...backButtonStyle, top: 0, left: 0 }}
+        >
+          Назад
+        </button>
+      </div>
       <Slide direction="up" triggerOnce cascade>
         <div style={{ position: "relative" }}>
           <p style={descriptionStyle}>
@@ -230,6 +237,7 @@ const VodaAltaya = () => {
                 style={{ position: "relative" }}
               />
               <button
+                onClick={handleDownload}
                 style={{
                   ...backButtonStyle,
                   bottom: 0,
@@ -239,8 +247,12 @@ const VodaAltaya = () => {
                   backgroundColor: "rgba(192, 219, 231, 1)",
                   color: "#0D303D",
                 }}
+                ref={anchorRef}
               >
                 Скачать список личных вещей
+                <a ref={anchorRef} style={{ display: "none" }}>
+                  Download PDF document
+                </a>
               </button>
             </div>
             <Slide direction="up" triggerOnce>

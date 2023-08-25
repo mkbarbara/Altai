@@ -3,11 +3,10 @@ import companyLogo from "../images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTimes,
-  faChevronDown,
-  faSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation } from "react-router-dom";
 import * as images from "../images";
+import FormTour from "./FormTour";
 
 const Header = () => {
   const [showImage, setShowImage] = useState(false);
@@ -93,27 +92,6 @@ const Header = () => {
       zIndex: 1001,
       fontFamily: "TextRegular",
       textAlign: "center",
-    },
-    inputContainer: {
-      display: "grid",
-      gridTemplateColumns: "repeat(2, 1fr)",
-      gap: "1rem",
-      margin: "40px 0",
-      alignItems: "center",
-    },
-    inputStyle: {
-      backgroundColor: "#c0dbe7",
-      color: "#0D303D",
-      fontFamily: "TextRegular",
-      fontSize: "1rem",
-      width: "300px",
-      height: "30px",
-      borderRadius: "6px",
-      padding: "10px",
-      border: "none",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
     },
     container: {
       position: "relative",
@@ -250,89 +228,7 @@ const Header = () => {
             Мы можем помочь подобрать Вам готовый тур или создать авторский тур
             по Вашим пожеланиям:
           </p>
-          <form style={{ margin: "40px 0" }}>
-            <div style={header_style.inputContainer}>
-              <input
-                placeholder="Город вылета*"
-                style={header_style.inputStyle}
-              ></input>
-              <div style={{ ...header_style.inputStyle, cursor: "pointer" }}>
-                Количество путешественников*
-                <FontAwesomeIcon icon={faChevronDown} />
-              </div>
-              <div style={{ ...header_style.inputStyle, cursor: "pointer" }}>
-                Дата вылета
-                <FontAwesomeIcon icon={faChevronDown} />
-              </div>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(2, 1fr)",
-                  textAlign: "left",
-                  alignItems: "center",
-                  padding: "10px",
-                }}
-              >
-                <div>Сезон:</div>
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(2, 1fr)",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: ".5rem",
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faSquare} />
-                    Зима
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: ".5rem",
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faSquare} />
-                    Весна
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: ".5rem",
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faSquare} />
-                    Лето
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: ".5rem",
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faSquare} />
-                    Осень
-                  </div>
-                </div>
-              </div>
-              <input
-                placeholder="Количество ночей*"
-                style={header_style.inputStyle}
-              ></input>
-              <input
-                placeholder="Бюджет на путешествие"
-                style={header_style.inputStyle}
-              ></input>
-            </div>
-            <button style={header_style.buttonStyles}>Путешествовать</button>
-          </form>
+          <FormTour resetOnClose={isPopupOpen}/>
           <p>Когда поехать на Алтай дешевле?</p>
           <p style={{ textAlign: "justify" }}>
             Май и сентябрь - самое время для бюджетного путешествия на Алтай.
