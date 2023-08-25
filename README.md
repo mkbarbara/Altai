@@ -10,6 +10,7 @@ Most interesting things in the project:
 - Filtering and sorting cards
 - Email form with popup message
 - Changing info image container
+  
 ![image](https://github.com/mkbarbara/Altai/assets/71386896/a93f5819-db8e-4afa-b319-785084cc876e)
 
 #### There is now one tour page "Вода Алтая", but it will be easy to add more - with different info. In perspective - to create the frontend for website owner to add tours.
