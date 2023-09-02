@@ -14,7 +14,7 @@ Most interesting things in the project:
 ![image](https://github.com/mkbarbara/Altai/assets/71386896/a93f5819-db8e-4afa-b319-785084cc876e)
 
 #### There is now one tour page "Вода Алтая", but it will be easy to add more - with different info. In perspective - to create the frontend for website owner to add tours and make backend to connect user and owner.
-I am open to your suggestions :)
+I am opened to your suggestions :)
 
 ## Available Scripts
 
